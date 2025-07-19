@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/App.scss";
+import photo from "../images/covene-unsplash.jpg"
 
 const regionalCode = [
   { region: "Andalucia", code: "ES-AN" },
@@ -9,7 +10,7 @@ const regionalCode = [
   { region: "Canarias", code: "ES-CN" },
   { region: "Cantabria", code: "ES-CB" },
   { region: "Castilla-La Mancha", code: "ES-CM" },
-  { region: "Castilla Y León", code: "ES-CL" },
+  { region: "Castilla y León", code: "ES-CL" },
   { region: "Cataluña", code: "ES-CT" },
   { region: "Comunidad Valenciana", code: "ES-VC" },
   { region: "Extremadura", code: "ES-EX" },
@@ -40,17 +41,23 @@ function App() {
 
   return (
     <>
-      <h1>Días festívos en España</h1>
-      <h2>Localiza que días son festivos en tu comunidad autónoma </h2>
+   
 
-      <form>
-        <label>Selecciona tu comunidad </label>
+     <section className="page">
+      <img src={photo} alt="Imagen de agenda con planning" className="image" />
+         <h1>Días festívos en España</h1>
+
+
+      <div>
+      <h2>Conoce los días festívos en tu comunidad para este 2025. </h2>
+      <form className="formbox">
+        <label>Selecciona tu comunidad autónoma </label>
         <select
           id="regions"
           value={regions}
           onInput={(ev) => setRegions(ev.target.value)}
         >
-          <option value=""></option>
+          <option>-Selecciona-</option>
           {regionalCode.map((regionObj) => (
             <option key={regionObj.code} value={regionObj.code}>
               {regionObj.region}
@@ -58,13 +65,11 @@ function App() {
           ))}
         </select>
       </form>
-
-      <section>
-        <h2>Son festívos</h2>
+      <article >
         <ul>
           {holidays.map((day) => {
             const [year, month, dayPart] = day.startDate.split("-");
-            const formattedDate = `${dayPart}/${month}/${year.slice(-2)} `;
+            const formattedDate = `${dayPart}/${month}/${year} `;
             return (
               <li key={day.startDate}>
                 {formattedDate} - {day.name[0].text}
@@ -72,6 +77,8 @@ function App() {
             );
           })}
         </ul>
+      </article>
+      </div>
       </section>
     </>
   );
