@@ -44,8 +44,11 @@ function App() {
    
 
      <section className="page">
+      <div className="cover">
+           <h1>Días festívos en España</h1>
       <img src={photo} alt="Imagen de agenda con planning" className="image" />
-         <h1>Días festívos en España</h1>
+      
+         </div>
 
 
       <div>
