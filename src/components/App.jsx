@@ -45,14 +45,14 @@ function App() {
 
      <section className="page">
       <div className="cover">
-           <h1>Días festívos en España</h1>
+           <h1>Días festivos en España</h1>
       <img src={photo} alt="Imagen de agenda con planning" className="image" />
       
          </div>
 
 
       <div>
-      <h2>Conoce los días festívos en tu comunidad para este 2025. </h2>
+      <h2>Conoce los días festivos en tu comunidad para este 2025. </h2>
       <form className="formbox">
         <label>Selecciona tu comunidad autónoma </label>
         <select

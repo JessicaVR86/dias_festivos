@@ -1,4 +1,4 @@
-# Días Festívos en España para el año 2025
+# Días Festivos en España para el año 2025
 
 Este proyecto web creado con React permite a los usuarios consultar los días festivos de su comunidad autónoma en España para el año 2025, utilizando la API   [OpenHolidaysAPI](https://openholidaysapi.org/swagger/index.html)
 
